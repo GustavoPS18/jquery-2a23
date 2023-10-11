@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução jQuery</title>
+    <!--Chamando biblioteca jQuery-->
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!--Funcionalidade da página-->
+    <script type="text/javascript">
+
+        function pegarvalor(){
+            var valorform = document.querySelector('.nome').value;
+            var valorformMail = document.querySelector('.email').value;
+            var valorformMensagem = document.querySelector('.mensagem').value;
+            alert(
+            ' ola, ' + valorform + 
+            ' Seu e-mail  ' + valorformMail + 
+            ' Mensagem do usuário ' + valorformMensagem
+            );
+        }
+        $(document).ready(function(){
+            $("a").click(function (){
+                alert('voce perdeu!');
+            })
+        })
+
+    </script>
+</head>
+    
+<body>
+    <form action="">
+        <input type="text" name="nome" class="nome" placeholder="Insira seu nome">
+        <input type="text" name="email" class="email" placeholder="Insira seu @email.com">
+        <textarea name="mensagem" cols="30" rows="10" class="mensagem" placeholder="Mensagem"></textarea>
+
+        <button onclick="pegarvalor()">Enviar</button>
+    </form>
+
+    <hr>
+    <a href="#">Não clique aqui</a>
+</body>
+
+</html>
